@@ -41,6 +41,12 @@ void putinb(int *la, int *lb, int *b, int ac)
         }
 }
 
+void swap(int *array)
+{
+	swap_elem(array, 0, 1);
+	write(1, "sa ", 3);
+}
+
 void pushswap(int *la, int *lb, int *b, int ac)
 {
         int i = 0;

@@ -72,9 +72,3 @@ void swap_elem(int *array, int index1, int index2)
 	array[index1] = array[index2];
 	array[index2] = x;
 }
-
-void swap(int *array)
-{
-	swap_elem(array, 0, 1);
-	write(1, "sa ", 3);
-}
