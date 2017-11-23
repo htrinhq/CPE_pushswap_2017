@@ -9,7 +9,8 @@ SRC	=	source/operations.c	\
 		source/main.c	\
 		source/pushswap.c	\
 		source/my_getnbr.c	\
-		source/my_strlen.c
+		source/my_strlen.c	\
+		source/returnswap.c
 
 OBJ	=	$(SRC:.c=.o)
 
