@@ -20,7 +20,7 @@ int returnmin(int *array, int size);
 void putminfirstleft(int *array, int size, int min);
 void putminfirstright(int *array, int size, int min);
 int *fillsrc(int *src, int ac, char **av);
-void pushswap(int *la, int *lb, int *b, int ac);
+void pushswap(int *la, int *lb, int *b, int size);
 void putinb(int *la, int *lb, int *b, int size);
 
 #endif

@@ -23,7 +23,7 @@ int isarraysorted(int *array, int size)
 {
 	int x = 0;
 
-	while (array[x] < array[x + 1] && array[x + 1] != '\0') {
+	while (array[x] <= array[x + 1] && array[x + 1] != '\0') {
 		x = x + 1;
 	}
 	if (x == size - 1)
@@ -59,19 +59,21 @@ void swap(int *array)
 	write(1, "sa ", 3);
 }
 
-void pushswap(int *la, int *lb, int *b, int ac)
+void pushswap(int *la, int *lb, int *b, int size)
 {
         int i = 0;
-        int size = ac - 1;
 
-        if (isarraysorted(la, size) || size == 1)
+        if (isarraysorted(la, size) || size == 1) {
+                write(1, "\n", 1);
                 return;
-        else {
+        } else {
                 putinb(la, lb, b, size);
                 while (i < *b - 1) {
                         write(1, "pa ", 3);
                         i = i + 1;
                 }
                 write(1, "pa\n", 3);
+                free(la);
+                free(lb);
         }
 }
