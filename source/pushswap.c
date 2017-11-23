@@ -41,7 +41,7 @@ void putinb(int *la, int *lb, int *b, int size)
         while (*b < size - 1) {
                 smin = returnmin(la, s);
                 min = la[smin];
-                if (smin < size / 2/* || smin == 0*/)
+                if (smin < size / 2)
                         putminfirstleft(la, s, min);
                 else
                         putminfirstright(la, s, min);
