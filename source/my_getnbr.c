@@ -5,7 +5,7 @@
 ** getnbr
 */
 
-int condit(char const *str, int i, int nb) {
+long condit(char const *str, int i, long nb) {
 	while (str[i] <= '9' && str[i] >= '0') {
 		nb = nb	+ (str[i] - 48);
 		nb = nb * 10;
@@ -18,7 +18,7 @@ int my_getnbr(char const *str)
 {
 	int minus_count = 0;
 	int i = 0;
-	int nb = 0;
+	long nb = 0;
 
 	while (str[i] == '+' || str[i] == '-') {
 		if (str[i] == '-') {

@@ -7,8 +7,9 @@
 
 #include "swap.h"
 #include <unistd.h>
+#include <stdio.h>
 
-int *fillsrc(int *src, int ac, char **av)
+long *fillsrc(long *src, int ac, char **av)
 {
         int a = 1;
 
@@ -19,24 +20,27 @@ int *fillsrc(int *src, int ac, char **av)
         return (src);
 }
 
-int isarraysorted(int *array, int size)
+int isarraysorted(long *array, int size)
 {
 	int x = 0;
 
-	while (array[x] <= array[x + 1] && array[x + 1] != '\0') {
+	while (array[x] <= array[x + 1] && x + 1 != size) {
 		x = x + 1;
 	}
-	if (x == size - 1)
+	if (x == size - 1) {
+                //printf("x : %i\nsize :%i\n", x, size);
 		return (1);
-	else
+	} else {
+                //printf("x : %i\nsize :%i\n", x, size);
 		return (0);
+        }
 }
 
-void putinb(int *la, int *lb, int *b, int size)
+void putinb(long *la, long *lb, int *b, int size)
 {
         int s = size;
         int smin;
-        int min;
+        long min;
 
         while (*b < size - 1) {
                 smin = returnmin(la, s);
@@ -53,13 +57,13 @@ void putinb(int *la, int *lb, int *b, int size)
         }
 }
 
-void swap(int *array)
+void swap(long *array)
 {
 	swap_elem(array, 0, 1);
 	write(1, "sa ", 3);
 }
 
-void pushswap(int *la, int *lb, int *b, int size)
+void pushswap(long *la, long *lb, int *b, int size)
 {
         int i = 0;
 

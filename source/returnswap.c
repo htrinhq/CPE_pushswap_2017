@@ -7,7 +7,7 @@
 
 #include "swap.h"
 
-int returnmin(int *array, int size)
+int returnmin(long *array, int size)
 {
 	int x = 0;
 	int min = array[0];
@@ -25,7 +25,7 @@ int returnmin(int *array, int size)
 	return (smin);
 }
 
-void swap_elem(int *array, int index1, int index2)
+void swap_elem(long *array, int index1, int index2)
 {
 	int x;
 

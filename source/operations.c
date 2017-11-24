@@ -8,7 +8,7 @@
 #include <stdlib.h>
 #include "swap.h"
 
-void rotate_left(int *array, int size)
+void rotate_left(long *array, int size)
 {
 	int i = 0;
 
@@ -18,7 +18,7 @@ void rotate_left(int *array, int size)
 	}
 }
 
-void rotate_right(int *array, int size)
+void rotate_right(long *array, int size)
 {
 	int i = size - 1;
 
@@ -28,7 +28,7 @@ void rotate_right(int *array, int size)
 	}
 }
 
-void putminfirstleft(int *array, int size, int min)
+void putminfirstleft(long *array, int size, long min)
 {
 	while (array[0] != min) {
 		if (array[0] > array[1] && array[1] != min)
@@ -38,7 +38,7 @@ void putminfirstleft(int *array, int size, int min)
 	}
 }
 
-void putminfirstright(int *array, int size, int min)
+void putminfirstright(long *array, int size, long min)
 {
 	while (array[0] != min) {
 		if (array[0] > array[1] && array[1] != min)

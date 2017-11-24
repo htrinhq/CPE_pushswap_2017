@@ -10,8 +10,8 @@
 
 int main(int ac, char **av)
 {
-	int *src = malloc(sizeof(int) * ac - 1);
-	int *lb = malloc(sizeof(int) * ac - 1);
+	long *src = malloc(sizeof(long) * ac - 1);
+	long *lb = malloc(sizeof(long) * ac - 1);
 	int b = 0;
 	int size = ac - 1;
 
