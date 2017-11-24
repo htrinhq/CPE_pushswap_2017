@@ -17,6 +17,8 @@ int main(int ac, char **av)
 
 	if (ac < 2)
 		return (84);
+	if (ac > 1000)
+		return (0);
 	else {
 		src = fillsrc(src, ac, av);
 		pushswap(src, lb, &b, size);
