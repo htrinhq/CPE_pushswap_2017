@@ -5,7 +5,8 @@
 ** getnbr
 */
 
-long condit(char const *str, int i, long nb) {
+long condit(char const *str, int i, long nb)
+{
 	while (str[i] <= '9' && str[i] >= '0') {
 		nb = nb	+ (str[i] - 48);
 		nb = nb * 10;

@@ -16,7 +16,7 @@ OBJ	=	$(SRC:.c=.o)
 
 NAME	=	push_swap
 
-CFLAGS	=	-W -Wall -Wextra -I include
+CFLAGS	=	-W -Wall -Wextra -Werror -I include
 
 all:	$(NAME)
 
