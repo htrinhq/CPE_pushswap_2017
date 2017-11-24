@@ -28,10 +28,8 @@ int isarraysorted(long *array, int size)
 		x = x + 1;
 	}
 	if (x == size - 1) {
-                //printf("x : %i\nsize :%i\n", x, size);
 		return (1);
 	} else {
-                //printf("x : %i\nsize :%i\n", x, size);
 		return (0);
         }
 }
