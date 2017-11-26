@@ -22,14 +22,13 @@ int my_getnbr(char const *str)
 	long nb = 0;
 
 	while (str[i] == '+' || str[i] == '-') {
-		if (str[i] == '-') {
+		if (str[i] == '-')
 			minus_count = minus_count + 1;
-		}
 		i = i + 1;
 	}
 	nb = condit(str, i, nb);
 	if (nb != 0 && (minus_count % 2) != 0)
 		nb = (nb) * (-1);
 	nb = nb / 10;
-		return (nb);
+	return (nb);
 }
